@@ -1,0 +1,90 @@
+<html>
+    <head>
+<title> Calculator</title>
+<link rel="stylesheet" href="style.css">
+    </head>
+
+   <body>
+
+    <h1>
+      Calculator For 
+
+    </h1>
+    <h2>
+      Fast Solution
+    </h2>
+    <h3> make life easy and fast</h3>
+
+      </div>
+   </body> 
+
+    <form name="form1" class="calci" action="calculator.html" method="POST">
+
+
+
+      <h4>Current date</h4>
+      <div id="current_date"></p>
+        <script>
+        
+        date = new Date();
+        year = date.getFullYear();
+        month = date.getMonth() + 1;
+        day = date.getDate();
+        document.getElementById("current_date").innerHTML = month + "/" + day + "/" + year;
+        </script><br><br><br>
+        <h4>Current Time</h4>
+      <div id="currentTime"></div>
+      <script>
+        
+        const element = document.getElementById('currentTime');
+        
+        setInterval(function () {
+          
+          const currentDate = new Date();
+          element.innerText = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
+        }, 1000);
+      </script><br> <br>
+<input type="text" name="answer" id="display">
+<br></br>
+
+
+
+<input type="button" value="c" onclick="form1.answer.value=''" class="button">
+
+
+<input type="button"  class= "button"value="<" onclick="form1.answer.value=form1.answer.value.substring(0,form1.answer.value.length*1-1)" >
+<input type="button"  class= "button"value="00" onclick="form1.answer.value+='00'">
+
+<input type="button"  class= "operator"value="/" onclick="form1.answer.value+='/'">
+<br></br>
+<input type="button" class= "button" value="7" onclick="form1.answer.value+='7'">
+<input type="button"  class= "button"value="8" onclick="form1.answer.value+='8'">
+<input type="button"  class= "button"value="9" onclick="form1.answer.value+='9'">
+
+<input type="button"  class= "operator"value="*" onclick="form1.answer.value+='*'">
+<br></br>
+
+
+<input type="button" class= "button" value="4" onclick="form1.answer.value+='4'">
+<input type="button"  class= "button"value="5" onclick="form1.answer.value+='5'">
+
+<input type="button"  class= "button"value="6" onclick="form1.answer.value+='6'">
+
+<input type="button"  class= "operator"value="-" onclick="form1.answer.value+='-'">
+<br></br>
+<input type="button"  class= "button"value="1" onclick="form1.answer.value+='1'">
+<input type="button"  class= "button"value="2" onclick="form1.answer.value+='2'">
+
+<input type="button"  class= "button"value="3" onclick="form1.answer.value+='3'">
+
+<input type="button"  class= "operator"value="+" onclick="form1.answer.value+='+'">
+<br></br>
+
+<input type="button" class= "button" value="0" onclick="form1.answer.value+='0'" id="zero">
+
+<input type="button" class= "button" value="." onclick="form1.answer.value+='.'">
+
+<input type="button"  class= "operator" value="=" onclick="form1.answer.value=eval(form1.answer.value)">
+ </form>
+
+</html>
